@@ -1,8 +1,10 @@
+// Mon premier server Http
+
 import queryString from "query-string";
 import http from 'http';
 const server = http.createServer((req, res) => {
     console.log(req.url);
-    
+
     let reqInfo = { url: req.url, method: req.method, contentType: req.headers['content-type'] };
     res.writeHead(200, { "Content-Type": "application/json" });
 
